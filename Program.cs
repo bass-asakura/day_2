@@ -1,5 +1,4 @@
 using Telegram.Bot;
-using Telegram.Bot.Types;
 
 var bot = new TelegramBotClient("7455362319:AAEX546zffA3eIEpdz7t0tgJcGhqUNHsFuw");
 
@@ -20,7 +19,7 @@ app.UseHttpsRedirection();
 
 app.MapPost("/input_message", async (string message) =>
 {
-    await bot.SendTextMessageAsync(1121590497, message);
+    await bot.SendTextMessageAsync(1121590497, message); // 1121590497 это мой тг-айди
     Console.WriteLine("Сообщение отправлено!");
 })
 .WithName("MessageToTeleBot")
