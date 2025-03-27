@@ -1,8 +1,6 @@
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
-// 7455362319:AAEX546zffA3eIEpdz7t0tgJcGhqUNHsFuw
-// токен бота
 var bot = new TelegramBotClient("7455362319:AAEX546zffA3eIEpdz7t0tgJcGhqUNHsFuw");
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,7 +20,8 @@ app.UseHttpsRedirection();
 
 app.MapPost("/input_message", async (string message) =>
 {
-    
+    await bot.SendTextMessageAsync(1121590497, message);
+    Console.WriteLine("Сообщение отправлено!");
 })
 .WithName("MessageToTeleBot")
 .WithOpenApi();
