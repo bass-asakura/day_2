@@ -19,8 +19,15 @@ app.UseHttpsRedirection();
 
 app.MapPost("/input_message", async (string message) =>
 {
-    await bot.SendTextMessageAsync(1121590497, message); // 1121590497 это мой тг-айди
-    Console.WriteLine("Сообщение отправлено!");
+    try
+    {
+        await bot.SendTextMessageAsync(1121590497, message); // 1121590497 это мой тг-айди
+        Console.WriteLine("Сообщение отправлено!");
+    }
+    catch(Exception)
+    {
+        Console.WriteLine("Сообщение не отправлено");
+    }
 })
 .WithName("MessageToTeleBot")
 .WithOpenApi();

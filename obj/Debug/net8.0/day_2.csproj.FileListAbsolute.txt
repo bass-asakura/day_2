@@ -33,3 +33,4 @@ C:\vs code\day_2\obj\Debug\net8.0\day_2.genruntimeconfig.cache
 C:\vs code\day_2\obj\Debug\net8.0\ref\day_2.dll
 C:\vs code\day_2\bin\Debug\net8.0\System.Text.Json.dll
 C:\vs code\day_2\bin\Debug\net8.0\Telegram.Bot.dll
+C:\vs code\day_2\obj\Debug\net8.0\day_2.sourcelink.json
